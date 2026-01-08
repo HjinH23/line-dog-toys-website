@@ -1,0 +1,267 @@
+.aboutPage {
+    margin-top: 80px;
+}
+
+.pageHeader {
+    background: var(--gradient-warm);
+    padding: var(--spacing-2xl) 0;
+    color: var(--white);
+}
+
+.pageTitle {
+    margin-bottom: var(--spacing-md);
+}
+
+.pageSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.sectionTitle {
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-dark);
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.highlight {
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+/* 公司简介 */
+.introGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.introImage {
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContent {
+    font-size: 8rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* 品牌理念 */
+.visionSection {
+    background: var(--white);
+}
+
+.visionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.visionCard {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-normal);
+}
+
+.visionCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.visionIcon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.visionCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-pink);
+}
+
+.visionCard p {
+    color: var(--gray-dark);
+    line-height: 1.7;
+}
+
+/* 产品优势 */
+.advantagesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.advantageItem {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.advantageItem:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.advantageNumber {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--primary-pink-lighter);
+    opacity: 0.3;
+    font-family: var(--font-fredoka);
+}
+
+.advantageItem h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-pink);
+    position: relative;
+    z-index: 1;
+}
+
+.advantageItem p {
+    color: var(--gray-dark);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+/* 发展历程 */
+.timelineSection {
+    background: var(--white);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: var(--spacing-lg) 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-primary);
+    transform: translateX(-50%);
+}
+
+.timelineItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+}
+
+.timelineItem:nth-child(even) .timelineYear {
+    order: 2;
+    text-align: left;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+    order: 1;
+    text-align: right;
+}
+
+.timelineYear {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: var(--font-fredoka);
+    text-align: right;
+    padding-right: var(--spacing-lg);
+}
+
+.timelineContent {
+    padding-left: var(--spacing-lg);
+}
+
+.timelineContent h4 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+}
+
+.timelineContent p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+}
+
+/* CTA */
+.ctaSection {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: var(--spacing-2xl) 0;
+}
+
+.ctaTitle {
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.ctaText {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .introGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .imageContent {
+        font-size: 5rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timelineItem {
+        grid-template-columns: 1fr;
+        padding-left: 60px;
+    }
+
+    .timelineItem:nth-child(even) .timelineYear,
+    .timelineItem:nth-child(even) .timelineContent {
+        order: 0;
+        text-align: left;
+    }
+
+    .timelineYear {
+        text-align: left;
+        padding-right: 0;
+        font-size: 2rem;
+    }
+
+    .timelineContent {
+        padding-left: 0;
+    }
+}

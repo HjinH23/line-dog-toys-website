@@ -1,0 +1,169 @@
+.contactPage {
+    margin-top: 80px;
+}
+
+.pageHeader {
+    background: var(--gradient-primary);
+    padding: var(--spacing-2xl) 0;
+    color: var(--white);
+}
+
+.pageTitle {
+    margin-bottom: var(--spacing-md);
+}
+
+.pageSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.sectionDescription {
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+/* 联系网格 */
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-2xl);
+}
+
+/* 信息卡片 */
+.infoCards {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.infoCard {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: var(--spacing-md);
+    transition: var(--transition-normal);
+}
+
+.infoCard:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.infoIcon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.infoCard h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-pink);
+}
+
+.infoCard p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+}
+
+/* 社交媒体 */
+.socialSection {
+    background: var(--gradient-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    color: var(--white);
+}
+
+.socialTitle {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.socialLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--white);
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.socialLink:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.socialLink span:first-child {
+    font-size: 1.5rem;
+}
+
+/* FAQ */
+.faqSection {
+    background: var(--white);
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.faqItem {
+    background: var(--cream);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary-pink);
+    transition: var(--transition-normal);
+}
+
+.faqItem:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.faqItem h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.faqItem p {
+    color: var(--gray-dark);
+    line-height: 1.7;
+}
+
+/* 响应式 */
+@media (max-width: 968px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .socialLinks {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,98 @@
+.productsPage {
+    margin-top: 80px;
+}
+
+.pageHeader {
+    background: var(--gradient-secondary);
+    padding: var(--spacing-2xl) 0;
+    color: var(--white);
+}
+
+.pageTitle {
+    margin-bottom: var(--spacing-md);
+}
+
+.pageSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.filterSection {
+    padding: var(--spacing-xl) 0;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+.categories {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.categoryButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--gray-light);
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: var(--transition-normal);
+}
+
+.categoryButton:hover {
+    background: var(--primary-pink-lighter);
+    transform: translateY(-2px);
+}
+
+.categoryButton.active {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-color: var(--primary-pink);
+    box-shadow: var(--shadow-md);
+}
+
+.categoryIcon {
+    font-size: 1.5rem;
+}
+
+.productsCount {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+}
+
+.productsCount strong {
+    color: var(--primary-pink);
+    font-size: 1.3rem;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .categories {
+        gap: var(--spacing-sm);
+    }
+
+    .categoryButton {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+
+    .productsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+    }
+}

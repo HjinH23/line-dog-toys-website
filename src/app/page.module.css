@@ -1,0 +1,253 @@
+.home {
+    margin-top: 80px;
+}
+
+/* 英雄区 */
+.hero {
+    background: linear-gradient(135deg, #FFD4E5 0%, #FFF9F0 50%, #D4C5F9 100%);
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    min-height: 500px;
+}
+
+.heroText {
+    animation: slideInLeft 0.8s ease;
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.heroSubtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+}
+
+.heroButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.heroImage {
+    position: relative;
+    height: 400px;
+    animation: slideInRight 0.8s ease;
+}
+
+.floatingElement {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floatingElement:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.floatingElement:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.floatingElement:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.mainIllustration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* 区块标题 */
+.sectionTitle {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+}
+
+.sectionSubtitle {
+    font-size: 1.15rem;
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* 产品网格 */
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.viewMore {
+    text-align: center;
+}
+
+/* 品牌故事 */
+.storySection {
+    background: var(--white);
+}
+
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.storyImage {
+    position: relative;
+    height: 400px;
+    background: var(--gradient-secondary);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storyIllustration {
+    font-size: 10rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.storyContent {
+    animation: fadeIn 1s ease;
+}
+
+.storyText {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-dark);
+}
+
+.storyText strong {
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+/* 特点网格 */
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.featureCard {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+}
+
+.featureCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.featureIcon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.featureCard:nth-child(2) .featureIcon {
+    animation-delay: 0.2s;
+}
+
+.featureCard:nth-child(3) .featureIcon {
+    animation-delay: 0.4s;
+}
+
+.featureCard:nth-child(4) .featureIcon {
+    animation-delay: 0.6s;
+}
+
+.featureCard h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.featureCard p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+}
+
+/* CTA区域 */
+.ctaSection {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: var(--spacing-2xl) 0;
+    margin-top: var(--spacing-2xl);
+}
+
+.ctaTitle {
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.ctaSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-xl);
+}
+
+.ctaButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+
+    .heroContent,
+    .storyGrid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .heroImage {
+        height: 300px;
+    }
+
+    .mainIllustration {
+        font-size: 8rem;
+    }
+
+    .storyImage {
+        height: 300px;
+    }
+
+    .storyIllustration {
+        font-size: 6rem;
+    }
+
+    .heroButtons,
+    .ctaButtons {
+        justify-content: center;
+    }
+}

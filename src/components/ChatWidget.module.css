@@ -1,0 +1,227 @@
+.chatButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: var(--transition-normal);
+    animation: pulse 2s infinite;
+}
+
+.chatButton:hover {
+    transform: scale(1.1);
+}
+
+.chatButton.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+.chatIcon {
+    font-size: 1.8rem;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #4CAF50;
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.chatWindow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 380px;
+    height: 550px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    pointer-events: none;
+    transition: var(--transition-normal);
+}
+
+.chatWindow.open {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: all;
+}
+
+.chatHeader {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    font-size: 2rem;
+}
+
+.headerInfo h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.status {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.closeButton {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.closeButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.chatBody {
+    flex: 1;
+    padding: var(--spacing-md);
+    overflow-y: auto;
+    background: var(--cream);
+}
+
+.message {
+    margin-bottom: var(--spacing-sm);
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    max-width: 80%;
+    animation: fadeIn 0.3s ease;
+    line-height: 1.5;
+}
+
+.botMessage {
+    background: var(--white);
+    color: var(--text-dark);
+    margin-right: auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.userMessage {
+    background: var(--gradient-primary);
+    color: var(--white);
+    margin-left: auto;
+}
+
+.quickReplies {
+    margin-top: var(--spacing-md);
+    animation: fadeIn 0.5s ease;
+}
+
+.quickRepliesTitle {
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.quickReplyButton {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: var(--spacing-xs);
+    background: var(--white);
+    color: var(--primary-pink);
+    border: 2px solid var(--primary-pink-light);
+    border-radius: var(--radius-md);
+    text-align: left;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.quickReplyButton:hover {
+    background: var(--primary-pink);
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.chatFooter {
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--gray-light);
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.chatInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+}
+
+.chatInput:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+}
+
+.sendButton {
+    width: 45px;
+    height: 45px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.sendButton:hover {
+    transform: scale(1.05);
+}
+
+/* 响应式 */
+@media (max-width: 480px) {
+    .chatWindow {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 100px);
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .chatButton {
+        bottom: 20px;
+        right: 20px;
+    }
+}
